@@ -349,8 +349,8 @@ async def upload_single_file(
             except Exception as rr:
                 LOGGER.warning(str(rr))
         os.remove(local_file_name)
-        if thumb is not None:
-            os.remove(thumb)
+       
+    #
     else:
         try:
             message_for_progress_display = message
@@ -449,8 +449,7 @@ async def upload_single_file(
                             start_time,
                         ),
                     )
-                if thumb is not None:
-                    os.remove(thumb)
+                #
             elif local_file_name.upper().endswith(("MP3", "M4A", "M4B", "FLAC", "WAV")):
                 metadata = extractMetadata(createParser(local_file_name))
                 duration = 0
@@ -501,8 +500,7 @@ async def upload_single_file(
                             start_time,
                         ),
                     )
-                if thumb is not None:
-                    os.remove(thumb)
+                #
             else:
                 thumb_image_path = None
                 if os.path.isfile(thumbnail_location):
@@ -539,8 +537,7 @@ async def upload_single_file(
                             start_time,
                         ),
                     )
-                if thumb is not None:
-                    os.remove(thumb)
+                #
 
         except MessageNotModified as oY:
             LOGGER.info(oY)
