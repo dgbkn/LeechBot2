@@ -117,6 +117,7 @@ async def button(bot, update: CallbackQuery):
                 "LeechBot.session",
                 "LeechBot.session-journal",
                 "config.env",
+                "thumb.jpg",
                 "sample_config.env",
             ]
             g_list = os.listdir()
