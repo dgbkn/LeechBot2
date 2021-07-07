@@ -25,6 +25,7 @@ from requests.utils import requote_uri
 from tobrot import (
     DESTINATION_FOLDER,
     DOWNLOAD_LOCATION,
+    THUMB_LOCATION,
     EDIT_SLEEP_TIME_OUT,
     INDEX_LINK,
     LOGGER,
@@ -307,8 +308,8 @@ async def upload_single_file(
     sent_message = None
     start_time = time.time()
     #
-    thumbnail_location = os.path.join(
-        DOWNLOAD_LOCATION, "thumbnails", str(from_user) + ".jpg"
+    thumbnail_location = THUMB_LOCATION
+        
     )
     # LOGGER.info(thumbnail_location)
     if UPLOAD_AS_DOC.upper() == "TRUE":  # todo: this code will be removed in future
