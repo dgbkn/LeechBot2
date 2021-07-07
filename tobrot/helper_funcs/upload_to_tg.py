@@ -308,8 +308,8 @@ async def upload_single_file(
     sent_message = None
     start_time = time.time()
     #
-    thumbnail_location = THUMB_LOCATION
-        
+    thumbnail_location = os.path.join(
+        THUMB_LOCATION     
     )
     # LOGGER.info(thumbnail_location)
     if UPLOAD_AS_DOC.upper() == "TRUE":  # todo: this code will be removed in future
